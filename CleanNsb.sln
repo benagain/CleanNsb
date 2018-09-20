@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventuallyPoc", "EventuallyPoc\EventuallyPoc.csproj", "{53BEC14F-9F97-417A-B329-8A3C8DB60A36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanNsb", "CleanNsb\CleanNsb.csproj", "{53BEC14F-9F97-417A-B329-8A3C8DB60A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
