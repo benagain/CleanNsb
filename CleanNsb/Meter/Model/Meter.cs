@@ -8,12 +8,13 @@ namespace CleanNsb.Meters.Model
     {
         public Mpxn Id { get; private set; }
 
-        public List<decimal> Readings { get; private set; } = new List<decimal>();
+        private List<Reading> readings = new List<Reading>();
+        public IReadOnlyList<Reading> Readings => readings;
 
         public Meter(Mpxn id) => Id = id;
 
-        public void AddReading(decimal amount) => Readings.Add(amount);
+        public void AddReading(decimal amount) => readings.Add(new Reading(amount));
 
-        public decimal LatestReading() => Readings.LastOrDefault();
+        public decimal LatestReading() => readings.LastOrDefault()?.Value ?? 0;
     }
 }

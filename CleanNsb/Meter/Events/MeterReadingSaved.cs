@@ -1,9 +1,11 @@
-﻿namespace CleanNsb.Meters.Events
+﻿using CleanNsb.Shared.Model;
+
+namespace CleanNsb.Meters.Events
 {
-    internal class MeterReadingSaved
+    public class MeterReadingSaved
     {
-        public MeterReadingSaved()
-        {
-        }
+        public Mpxn Meter { get; set; }
+
+        public decimal Reading { get; set; }
     }
 }

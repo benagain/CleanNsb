@@ -1,6 +1,6 @@
-﻿namespace EventuallyPoc.Meter.Model
+﻿namespace CleanNsb.Meters.Model
 {
-    internal class Reading
+    public class Reading
     {
         public Reading(decimal value)
         {

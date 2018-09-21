@@ -17,7 +17,7 @@ namespace CleanNsb.Meters
         {
             meter.AddReading(reading);
 
-            message.Publish(new MeterReadingSaved());
+            message.Publish(new MeterReadingSaved { Meter = meter.Id });
 
             return Task.CompletedTask;
         }
