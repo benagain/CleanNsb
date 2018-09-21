@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 
-namespace CleanNsb.Utility
+namespace CleanNsb.Service
 {
-    public static class CollectionFindOrCreate
+    public static class DbSetFindOrCreate
     {
-        public static T FindOrCreate<T>(this ICollection<T> context, Func<T, bool> predicate, Func<T> creator)
+        public static T FindOrCreate<T>(this DbSet<T> context, Func<T, bool> predicate, Func<T> creator) where T : class
         {
             var found = context.FirstOrDefault(predicate);
 
@@ -17,7 +17,7 @@ namespace CleanNsb.Utility
 
         private static bool IsNullOrDefault<T>(this T item) => Equals(item, default(T));
 
-        private static T Create<T>(this ICollection<T> context, Func<T> creator)
+        private static T Create<T>(this DbSet<T> context, Func<T> creator) where T : class
         {
             var item = creator();
             context.Add(item);

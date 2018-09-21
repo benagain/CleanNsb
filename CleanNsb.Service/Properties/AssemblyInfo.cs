@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EventuallyPoc")]
+[assembly: AssemblyTitle("CleanNsb.Service")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EventuallyPoc")]
+[assembly: AssemblyProduct("CleanNsb.Service")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("53bec14f-9f97-417a-b329-8a3c8db60a36")]
+[assembly: Guid("ac5d2f13-5260-4bc4-a04d-55a993ce0e78")]
 
 // Version information for an assembly consists of the following four values:
 //

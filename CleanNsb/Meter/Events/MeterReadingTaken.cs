@@ -1,4 +1,4 @@
-﻿namespace EventuallyPoc.Nsb
+﻿namespace CleanNsb.Meters.Events
 {
     public class MeterReadingTaken
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EventuallyPoc
+namespace CleanNsb
 {
     namespace Maybe
     {
@@ -18,6 +18,8 @@ namespace EventuallyPoc
                 HasValue ? getter(_value) : new Maybe<TResult>();
 
             public T OrElse(T alternative) => HasValue ? _value : alternative;
+
+            public T OrElseThrow(Func<Exception> exception) => HasValue ? _value : throw exception();
 
             public void Do(Action<T> action)
             {
