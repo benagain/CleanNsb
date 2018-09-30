@@ -23,7 +23,12 @@ namespace CleanNsb.Service
         public async Task Handle(MeterReadingTaken message, IMessageHandlerContext context)
         {
             var meter = aggregate.Load(Mpxn.From(message.Mpxn));
-            await feature.Handle(meter, message.Reading);
+            await feature.UseContext(context.Wrap()).Handle(meter, message.Reading);
         }
+    }
+
+    internal static class ContextExtension
+    {
+        internal static MessageContext Wrap(this IMessageHandlerContext context) => new NServiceBusMessageContext(context);
     }
 }

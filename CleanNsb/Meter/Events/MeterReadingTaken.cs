@@ -2,7 +2,8 @@
 {
     public class MeterReadingTaken
     {
-        public string Mpxn { get; set; }
+        public int Mpxn { get; set; }
+
         public decimal Reading { get; set; }
     }
 }

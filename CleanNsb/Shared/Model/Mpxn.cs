@@ -17,8 +17,8 @@ namespace CleanNsb.Shared.Model
         {
             switch (obj)
             {
-                case string other: return Value.ToString() == other;
                 case Mpxn other: return Value == other.Value;
+                case string other: return Value.ToString() == other;
                 case int other: return Value == other;
                 default: return false;
             }

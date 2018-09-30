@@ -6,18 +6,19 @@ namespace CleanNsb.Meters
 {
     public class MeterReadingTakenFeature
     {
-        private readonly MessageContext message;
+        private MessageContext message;
 
-        public MeterReadingTakenFeature(MessageContext message)
+        public MeterReadingTakenFeature UseContext(MessageContext message)
         {
             this.message = message;
+            return this;
         }
 
         public Task Handle(Meter meter, decimal reading)
         {
             meter.AddReading(reading);
 
-            message.Publish(new MeterReadingSaved { Meter = meter.Id });
+            message?.Publish(new MeterReadingSaved { Meter = meter.Id });
 
             return Task.CompletedTask;
         }
